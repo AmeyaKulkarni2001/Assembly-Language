@@ -27,7 +27,7 @@ section .text
 global _start
 
  _start:
-  operate 1,1,msg,msglen 
+  	operate 1,1,msg,msglen 
 	mov rsi ,arr
 	mov cx ,05
 	fldz
@@ -37,7 +37,7 @@ up:
 	dec cx
 	jnz up
 
-  fdiv dword[divisor]
+  	fdiv dword[divisor]
 	fst  dword[mean]
 	fmul dword[tent]
 	fbstp tword[mean1]
@@ -66,7 +66,7 @@ againx:
 	and bl,0FH
 	cmp bl,09H
 	jbe    downx
-    add bl,07H 
+	add bl,07H 
     
 downx:
 	add   bl,30H	
