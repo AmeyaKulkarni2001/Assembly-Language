@@ -44,8 +44,8 @@ inc_num1:
             mov al,[rdi]
             
 disp_loop1:
-	        mov cl,2
-	        mov al,[rdi]
+	    mov cl,2
+	    mov al,[rdi]
             
 againx1:
             rol al,4
@@ -63,10 +63,10 @@ downx1:
             jnz againx1
             
             mov byte[rsi],0AH
-			inc rsi			
-			inc rdi
-			dec dl
-			jnz disp_loop1
-			op 1,1,res,15
+	    inc rsi			
+	    inc rdi
+	    dec dl
+	    jnz disp_loop1
+	    op 1,1,res,15
 			
-			op 60,0,0,0
+	    op 60,0,0,0
